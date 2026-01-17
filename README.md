@@ -1,5 +1,4 @@
-# Aidan's Dotfiles :)
-
+#Adn's Dotfiles :)
 Can be installed with
 
 ```bash
