@@ -92,6 +92,9 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
+# Appimages
+export PATH="$PATH:$HOME/.appimage/"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -115,6 +118,8 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias dev='cd "$(find $HOME -name HEAD -execdir test -e refs -a -e objects \; -printf %h\\n | fzf | xargs dirname)"'
+alias ff='firefox'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+

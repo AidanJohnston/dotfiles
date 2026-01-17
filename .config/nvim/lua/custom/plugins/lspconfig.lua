@@ -1,5 +1,5 @@
 return {
-    { -- LSP Configuration & Plugins
+	{ -- LSP Configuration & Plugins
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			-- Automatically install LSPs and related tools to stdpath for neovim
@@ -126,7 +126,7 @@ return {
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
-            local util = require "lspconfig/util"
+			local util = require("lspconfig/util")
 
 			-- Enable the following language servers
 			--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -142,17 +142,17 @@ return {
 				-- gopls = {},
 				-- pyright = {},
 				rust_analyzer = require("lspconfig").rust_analyzer.setup({
-                    capabilities = capabilities,
-                    filetypes= {"rust"},
-                    root_dir = util.root_pattern("Cargo.toml"),
-                    settings = {
-                        ['rust-analzer'] = {
-                            cargo = {
-                                allFeatures = true,
-                            }
-                        },
-                    }
-                }),
+					capabilities = capabilities,
+					filetypes = { "rust" },
+					root_dir = util.root_pattern("Cargo.toml"),
+					settings = {
+						["rust-analzer"] = {
+							cargo = {
+								allFeatures = true,
+							},
+						},
+					},
+				}),
 				pylsp = require("lspconfig").pylsp.setup({
 					settings = {
 						pylsp = {
